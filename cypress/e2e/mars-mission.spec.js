@@ -16,7 +16,7 @@ describe('Mars Mission Task Tracker', () => {
       cy.get('input[name="task-desc"]').type('Collect Martian soil samples.');
       cy.get('input[name="task-assigned"]').type('Astronaut 1');
       
-      // Submit the form (assuming there's a form and a submit button)
+      // Submit the form
       cy.get('button[type="submit"]').click();
       
       // Check if the task was added to the list
@@ -24,7 +24,7 @@ describe('Mars Mission Task Tracker', () => {
     });
   
     it('allows deleting a task', () => {
-      // Assuming tasks have delete buttons with a class "delete-btn"
+      // Delete a task with a button class "delete-btn"
       cy.get('.delete-btn').first().click();
       
       // Confirm the task has been removed from the list
@@ -37,7 +37,7 @@ describe('Mars Mission Task Tracker', () => {
     });
   
     it('deletes all tasks when the clear button is clicked', () => {
-      // Assuming there's a clear button to delete all tasks
+      // Delete all tasks
       cy.get('.clear-tasks-btn').click();
       
       // Check if the task list is empty
